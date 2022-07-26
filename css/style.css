@@ -1,8 +1,7 @@
-
 body{
     margin: 0 0 0 0;
     font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei,
       Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
-    background-image: url(D:\blog\public\css\img\10001.jpg);
+    background-image: url('D:\blog\public\css\img\10001.jpg');
     background-repeat: no-repeat;
 }
