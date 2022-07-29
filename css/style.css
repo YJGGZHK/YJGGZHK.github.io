@@ -22,6 +22,7 @@ a:hover{
     height: 770px;
     background: url(./png/首页/首页_0008_图层-0.png) no-repeat;
     border: 10px blue solid;
+    border-radius: 10px;
 }
 .banbox{
     float: right;
