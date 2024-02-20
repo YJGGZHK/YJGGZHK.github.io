@@ -15,6 +15,7 @@
         <h2><a :href="url">{{school.name}}</a></h2>
         <input type="text" :value='school.name'>
         <input type="text" v-model:value='school.name'>
+        <button v-on:click="showInfo">点击</button>
     </div>
     <script>
         Vue.config.productionTip = false
@@ -27,10 +28,15 @@
                 school:
                 {
                     name: "yjggzhk",
+                },
+            },
+            methods: {
+                    showInfo(){
+                        alert('你好')
+                        
+                    }
                 }
-
-
-            }
+            
 
 
         })
