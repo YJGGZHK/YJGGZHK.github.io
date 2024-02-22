@@ -17,6 +17,17 @@
         <input type="text" v-model:value='school.name'>
         <button v-on:click="showInfo">点击</button>
     </div>
+
+    <div class="root2">
+        <h2>renyuan</h2>
+        <input type="text" placeholder="name" v-model="keyword">
+        <ul>
+            <li v-for="(item, index) in FILpersons" :key="index">
+                {{item.name}}-{{item.age}}-{{item.sex}}
+
+            </li>
+        </ul>
+    </div>
     <script>
         Vue.config.productionTip = false
 
@@ -39,6 +50,39 @@
             },
             watch: {
             },
+        })
+
+        const vm = new Vue({
+            el: '.root2',
+            data: {
+                keyword: '',
+                persons: [
+                    { id: "001", name: "mdm", age: 19, sex: 'wm' },
+                    { id: "002", name: "zdy", age: 12, sex: 'wm' },
+                    { id: "003", name: "zjl", age: 12, sex: 'mm' },
+                    { id: "004", name: "wzl", age: 19, sex: 'mm' }
+                ],
+                // flipersons:[]
+            },
+            // watch: {
+
+            //     keyword:{
+            //         immediate:true,
+            //         handler(val){
+            //             this.flipersons= this.persons.filter((item)=>{
+            //             return item.name.indexOf(val)!==-1
+            //             })
+            //         }
+            //     }
+
+            // },
+            computed: {
+                FILpersons() {
+                    return this.persons.filter((item) => {
+                        return item.name.indexOf(this.keyword) !== -1
+                    })
+                }
+            }
         })
 
     </script>
